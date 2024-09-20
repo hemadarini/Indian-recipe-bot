@@ -1,0 +1,38 @@
+# Simple rule-based chatbot for Indian cooking recipes
+
+def indian_recipe_bot():
+    print("Welcome to the Indian Recipe Chatbot!")
+    print("You can ask about Indian recipes and I'll try to help.")
+    print("Type 'exit' to quit the chatbot.")
+
+    while True:
+        # Get the user query
+        user_input = input("\nYou: ").lower()
+
+        # Exit condition
+        if user_input == 'exit':
+            print("Goodbye! Enjoy your cooking!")
+            break
+
+        # Define some basic rules for Indian recipes
+        elif "how to make chapati" in user_input:
+            print("\nBot: To make chapati, you will need:\n1. Whole wheat flour\n2. Water\n3. Salt\n4. Ghee or oil (optional).")
+            print("Instructions: Mix flour with water to make dough, roll into flat circles, and cook on a hot pan till golden brown.")
+
+        elif "how to make biryani" in user_input:
+            print("\nBot: For biryani, you need:\n1. Basmati rice\n2. Chicken/Vegetables\n3. Spices (garam masala, cumin, coriander, etc.)\n4. Yogurt\n5. Saffron.")
+            print("Instructions: Cook rice and layer it with marinated meat/vegetables, and bake it together for rich flavors.")
+
+        elif "how to make paneer butter masala" in user_input:
+            print("\nBot: For paneer butter masala, you will need:\n1. Paneer (Indian cottage cheese)\n2. Tomatoes\n3. Cream\n4. Spices (cumin, garam masala, turmeric).")
+            print("Instructions: Cook tomatoes with spices, blend to make gravy, add paneer, and simmer with cream.")
+
+        elif "how to make dosa" in user_input:
+            print("\nBot: To make dosa, you need:\n1. Rice\n2. Urad dal\n3. Fenugreek seeds\n4. Water for the batter.")
+            print("Instructions: Soak rice and dal, grind them into a batter, ferment overnight, and cook on a hot pan for crispy dosa.")
+
+        else:
+            print("\nBot: Sorry, I don't know that recipe. Try asking about something else like 'how to make chapati' or 'how to make dosa'.")
+
+if __name__ == "__main__":
+    indian_recipe_bot()
